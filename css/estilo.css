@@ -290,8 +290,8 @@
 
 /* Pseudoclases */
 
-.navegacion ul li a:visited{
-    color: black;
+.navegacion ul li a:hover{
+    color: white;
 }
 
 
