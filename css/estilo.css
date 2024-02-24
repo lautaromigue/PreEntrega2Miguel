@@ -5,9 +5,78 @@
 
 /* ---------NAV---------- */
 
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(249, 225, 197);
+}
 
+.navegacion img{
+    height: 100px;
+} 
+
+.navegacion ul{
+    list-style: none;
+    display: flex;
+    width: 300px;
+}
+
+.navegacion ul li{
+    margin: 0 10px;
+    height: 20px;
+}
+
+.navegacion ul li a{
+    text-decoration: none;
+    color: black;
+}
 
 /* ---------MAIN------------- */
 
+.texto-principal{
+    background-color: beige;
+    font-size: 20px;
+    text-align: center;
+}    
+
+.texto-secundario{
+    text-align: center;
+}
+
+.imagenes-gatos{
+    align-items: center;
+}
+
+.imagenes-gatos img{
+    display: flex;
+    margin: 10px;
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+}
+
+.imagenes-perros img{
+    display: flex;
+    margin: 10px;
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+}
+
+.imagenes-tortugas img{
+    display: flex;
+    margin: 10px;
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+}
 
 
+
+/* Estrategia Responsive = Mobile First */
+@media (min-width: 400px){
+    .navegacion ul{
+        justify-content: center;
+    }
+}
