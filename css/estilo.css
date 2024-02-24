@@ -1,54 +1,107 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 /* ---------NAV---------- */
 
-.navegacion{
+.navegacion {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(249, 225, 197);
 }
 
-.navegacion img{
+.navegacion img {
     height: 100px;
-} 
+}
 
-.navegacion ul{
+.navegacion ul {
     list-style: none;
     display: flex;
     width: 300px;
+    justify-content: center;
 }
 
-.navegacion ul li{
+.navegacion ul li {
     margin: 0 10px;
     height: 20px;
 }
 
-.navegacion ul li a{
+.navegacion ul li a {
     text-decoration: none;
     color: black;
 }
 
 /* ---------MAIN------------- */
 
-.texto-principal{
+.texto-principal {
     background-color: beige;
     font-size: 20px;
     text-align: center;
-}    
+}
 
-.texto-secundario{
+.texto-secundario {
     text-align: center;
 }
 
-.imagenes-gatos{
+/* .imagenes-gatos{
     align-items: center;
+} */
+
+
+/* Estilos seccion1 */
+.seccion1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "imagenes-gato-1"
+    "imagenes-gato-2"
+    "imagenes-perro-1"
+    "imagenes-perro-2"
+    "imagenes-tortuga-1"
+    "imagenes-tortuga-2";
+    /* grid-template-areas:
+    /* "imagenes-gato-1 imagenes-gato-2"
+    "imagenes-perro-1 imagenes-perro-2"
+    "imagenes-tortuga-1 imagenes-tortuga-2"; */
 }
 
-.imagenes-gatos img{
+.imagenes-perro-1 {
+    grid-area: imagenes-perro-1;
+}
+
+.imagenes-perro-2 {
+    grid-area: imagenes-perro-2;
+}
+
+.imagenes-gato-1 {
+    grid-area: imagenes-gato-1;
+}
+
+.imagenes-gato-2 {
+    grid-area: imagenes-gato-2;
+}
+
+.imagenes-tortuga-1 {
+    grid-area: imagenes-tortuga-1;
+}
+
+.imagenes-tortuga-2 {
+    grid-area: imagenes-tortuga-2;
+}
+
+.imagenes-gato-1 img{
+    display: flex;
+    margin: 10px;
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+    align-content: center;
+}
+
+
+.imagenes-gato-2 img {
     display: flex;
     margin: 10px;
     width: 350px;
@@ -56,7 +109,7 @@
     padding: 10px;
 }
 
-.imagenes-perros img{
+.imagenes-perro-1 img {
     display: flex;
     margin: 10px;
     width: 350px;
@@ -64,7 +117,23 @@
     padding: 10px;
 }
 
-.imagenes-tortugas img{
+.imagenes-perro-2 img {
+    display: flex;
+    margin: 10px;
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+}
+
+.imagenes-tortuga-1 img {
+    display: flex;
+    margin: 10px;
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+}
+
+.imagenes-tortuga-2 img {
     display: flex;
     margin: 10px;
     width: 350px;
@@ -75,8 +144,14 @@
 
 
 /* Estrategia Responsive = Mobile First */
-@media (min-width: 400px){
-    .navegacion ul{
-        justify-content: center;
+@media(min-width: 671px) {
+    .seccion1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "imagenes-gato-1 imagenes-gato-2"
+            "imagenes-perro-1 imagenes-perro-2"
+            "imagenes-tortuga-1 imagenes-tortuga-2";
     }
 }
