@@ -45,9 +45,6 @@
     text-align: center;
 }
 
-/* .imagenes-gatos{
-    align-items: center;
-} */
 
 
 /* Estilos seccion1 */
@@ -61,10 +58,6 @@
     "imagenes-perro-2"
     "imagenes-tortuga-1"
     "imagenes-tortuga-2";
-    /* grid-template-areas:
-    /* "imagenes-gato-1 imagenes-gato-2"
-    "imagenes-perro-1 imagenes-perro-2"
-    "imagenes-tortuga-1 imagenes-tortuga-2"; */
 }
 
 .imagenes-perro-1 {
@@ -109,6 +102,7 @@
     padding: 10px;
 }
 
+
 .imagenes-perro-1 img {
     display: flex;
     margin: 10px;
@@ -141,6 +135,56 @@
     padding: 10px;
 }
 
+/* Pagiana GATOS */
+
+/* Estilo seccion-gatos */
+.seccion-gatos {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "imagenes-gato-1"
+    "imagenes-gato-2"
+    "imagenes-gato-3"
+    "imagenes-gato-4"
+    "imagenes-gato-5";
+      /* "imagenes-gato-1 imagenes-gato-2 imagenes-gato-3"
+      "imagenes-gato-1 imagenes-gato-4 imagenes-gato-5"; */
+  }
+  
+  .imagenes-gato-1 { grid-area: imagenes-gato-1; }
+  
+  .imagenes-gato-2 { grid-area: imagenes-gato-2; }
+  
+  .imagenes-gato-3 { grid-area: imagenes-gato-3; }
+  
+  .imagenes-gato-4 { grid-area: imagenes-gato-4; }
+  
+  .imagenes-gato-5 { grid-area: imagenes-gato-5; }
+  
+
+.imagenes-gato-3 img {
+    display: flex;
+    margin: 10px;
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+}
+
+.imagenes-gato-4 img {
+    display: flex;
+    margin: 10px;
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+}
+
+.imagenes-gato-5 img {
+    display: flex;
+    margin: 10px;
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+}
 
 
 /* Estrategia Responsive = Mobile First */
@@ -153,5 +197,16 @@
             "imagenes-gato-1 imagenes-gato-2"
             "imagenes-perro-1 imagenes-perro-2"
             "imagenes-tortuga-1 imagenes-tortuga-2";
+    }
+}
+
+@media(min-width: 1110px){
+    .seccion-gatos{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "imagenes-gato-1 imagenes-gato-2 imagenes-gato-3"
+        "imagenes-gato-1 imagenes-gato-4 imagenes-gato-5";
     }
 }
