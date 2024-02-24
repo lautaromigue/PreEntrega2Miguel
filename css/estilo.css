@@ -135,7 +135,7 @@
     padding: 10px;
 }
 
-/* Pagiana GATOS */
+/* --------------Pagina GATOS------------- */
 
 /* Estilo seccion-gatos */
 .seccion-gatos {  
@@ -147,8 +147,6 @@
     "imagenes-gato-3"
     "imagenes-gato-4"
     "imagenes-gato-5";
-      /* "imagenes-gato-1 imagenes-gato-2 imagenes-gato-3"
-      "imagenes-gato-1 imagenes-gato-4 imagenes-gato-5"; */
   }
   
   .imagenes-gato-1 { grid-area: imagenes-gato-1; }
@@ -186,6 +184,54 @@
     padding: 10px;
 }
 
+/* --------------Pagina PERROS--------------- */
+
+/* Estilo seccion-gatos */
+.seccion-perros {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "imagenes-perro-1"
+    "imagenes-perro-2"
+    "imagenes-perro-3"
+    "imagenes-perro-4"
+    "imagenes-perro-5";
+  }
+  
+  .imagenes-perro-1 { grid-area: imagenes-perro-1; }
+  
+  .imagenes-perro-2 { grid-area: imagenes-perro-2; }
+  
+  .imagenes-perro-3 { grid-area: imagenes-perro-3; }
+  
+  .imagenes-perro-4 { grid-area: imagenes-perro-4; }
+  
+  .imagenes-perro-5 { grid-area: imagenes-perro-5; }
+
+.imagenes-perro-3 img {
+    display: flex;
+    margin: 10px;
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+}
+
+.imagenes-perro-4 img {
+    display: flex;
+    margin: 10px;
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+}
+
+.imagenes-perro-5 img {
+    display: flex;
+    margin: 10px;
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+}
+
 
 /* Estrategia Responsive = Mobile First */
 @media(min-width: 671px) {
@@ -208,5 +254,16 @@
         grid-template-areas:
         "imagenes-gato-1 imagenes-gato-2 imagenes-gato-3"
         "imagenes-gato-1 imagenes-gato-4 imagenes-gato-5";
+    }
+}
+
+@media(min-width: 1110px){
+    .seccion-perros{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "imagenes-perro-1 imagenes-perro-2 imagenes-perro-3"
+        "imagenes-perro-1 imagenes-perro-4 imagenes-perro-5";
     }
 }
